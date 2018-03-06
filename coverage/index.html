@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Battle-monsters</title>
+    <title>Code coverage for Battle monsters</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-06T15:38:59+00:00">2018-03-06T15:38:59+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-06T16:20:45+00:00">2018-03-06T16:20:45+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>1</b> files in total.
-    <b>10</b> relevant lines. 
-    <span class="green"><b>10</b> lines covered</span> and
+    <b>2</b> files in total.
+    <b>17</b> relevant lines. 
+    <span class="green"><b>17</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,7 +51,17 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#8effc9ce57280465ddd74251bbc8ed02edbdbcbf" class="src_link" title="spec/features/infrastructure_spec.rb">spec/features/infrastructure_spec.rb</a></td>
+        <td class="strong"><a href="#c918221883a8e0d797841fed2e6c7dae795c7369" class="src_link" title="spec/features/hitpoints_spec.rb">spec/features/hitpoints_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>7</td>
+        <td>7</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5dd57cbc2525ce4a88881890e14c47470ee4184a" class="src_link" title="spec/features/infrastructure_spec.rb">spec/features/infrastructure_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>13</td>
         <td>10</td>
@@ -76,7 +86,86 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="8effc9ce57280465ddd74251bbc8ed02edbdbcbf">
+        <div class="source_table" id="c918221883a8e0d797841fed2e6c7dae795c7369">
+  <div class="header">
+    <h3>spec/features/hitpoints_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;capybara&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;capybara/rspec&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">feature &#39;Hitpoints&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &#39;User can see the hitpoints of player 2&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit(&#39;/play&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_css(&#39;div#loadbar.w3-container&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="5dd57cbc2525ce4a88881890e14c47470ee4184a">
   <div class="header">
     <h3>spec/features/infrastructure_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
