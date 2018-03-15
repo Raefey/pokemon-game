@@ -73,26 +73,26 @@
 <div id='parent'>
 <div id="blastoise-health-bar">
 <div class="w3-container"><div class="w3-light-grey">
-  <div id="player_2_health" class="w3-container w3-round w3-red w3-center" style="height:48px;width:<%=$game.player_2.hit_points%>%"><%=$game.player_2.name%>: <%=$game.player_2.hit_points%>HP
+  <div id="player_2_health" class="w3-container w3-round w3-red w3-center" style="height:48px;width:<%=@game.player_2.hit_points%>%"><%=@game.player_2.name%>: <%=@game.player_2.hit_points%>HP
   </div></div></div></div>
 <br>
 
 <div id='parent'>
 <div id= "charizard-health-bar">
 <div class="w3-container"><div class="w3-light-grey">
-  <div id="player_1_health" class="w3-container w3-round w3-green w3-center" style="height:48px;width:<%=$game.player_1.hit_points%>%"><%=$game.player_1.name%>: <%=$game.player_1.hit_points%>HP
+  <div id="player_1_health" class="w3-container w3-round w3-green w3-center" style="height:48px;width:<%=@game.player_1.hit_points%>%"><%=@game.player_1.name%>: <%=@game.player_1.hit_points%>HP
   </div></div></div>
 <br>
 
 <div id='parent'>
 <div id= "charizard">
-<img style="height:250px; width:250px;" src="https://cdn.bulbagarden.net/upload/4/48/Spr_b_5b_006.png" alt="charizard">
+<img style="height:250px; width:250px;" src="<%=@game.player_1.image%>" alt="charizard">
 </div></div></div>
 <br>
 
 <div id='parent'>
 <div id= "blastoise">
-<img style="height:250px; width:250px;" src="https://cdn.bulbagarden.net/upload/3/3d/Spr_5b_009.png" alt="blastoise">
+<img style="height:250px; width:250px;" src="<%=@game.player_2.image%>" alt="blastoise">
 </div></div></div>
 <br>
 
@@ -109,7 +109,6 @@
 <button class="w3-button w3-green" onclick="heal()">Heal</button>
 </div></div></div>
 <br>
-
 
 <script>
 function heal() {

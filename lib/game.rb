@@ -10,6 +10,14 @@ class Game
     @opponent = player_2
   end
 
+  def self.create_instance(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.return_instance
+    @game
+  end
+
   def attack(name)
     name.receive_damage
   end

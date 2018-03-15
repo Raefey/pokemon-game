@@ -1,5 +1,32 @@
-<form action="/names" method="post">
- <input type="text" name="Player_1_name" value="Raefe">
- <input type="text" name="Player_2_name" value="Geodude">
- <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <h1> Choose your pokemon trainer name </h1> -->
+
+    <form action="/names" method="post">
+     <!-- <input type="text" name="Player_1_name" value="Raefe">
+     <input type="text" name="Player_2_name" value="George"> -->
+
+     <h1> Choose your starting pokemon </h1>
+     <label>
+       <input type="radio" name="pokemon" value="Bulbasaur" required>
+       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/5/56/Spr_4h_001_s.png">
+     </label>
+     <label>
+       <input type="radio" name="pokemon" value="Squirtle" required>
+       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/1/1f/Spr_4h_007.png">
+     </label>
+     <label>
+       <input type="radio" name="pokemon" value="Charmander" required>
+       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/f/f2/Spr_4d_004.png">
+     </label>
+     <br><input type="submit" value="Submit">
+    </form>
+
+
+  </body>
+</html>

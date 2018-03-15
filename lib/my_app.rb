@@ -11,21 +11,19 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    player_1 = Player.new(params[:Player_1_name])
-    player_2 = Player.new(params[:Player_2_name])
-    $game = Game.new(player_1, player_2)
+    Game.create_instance(Player.new(params[:pokemon]), Player.new('Blastoise'))
     redirect('/play')
   end
 
   get '/play' do
-    @game = $game
+    @game = Game.return_instance
     session[:message] = "#{@player_1_name} vs #{@player_2_name}"
     @message = session[:message]
     erb :play
   end
 
   get '/attack' do
-    @game = $game
+    @game = Game.return_instance
     @game.attack(@game.opponent)
     redirect('/game_over') if @game.game_over?(@game.opponent)
     @game.change_turns
@@ -33,12 +31,12 @@ class Battle < Sinatra::Base
   end
 
   get '/game_over' do
-    @game = $game
+    @game = Game.return_instance
     erb(:game_over)
   end
 
   post '/heal' do
-    @game = $game
+    @game = Game.return_instance
     @game.player_1.heal
     puts @game.player_1.hitpoints
     redirect('/play')
