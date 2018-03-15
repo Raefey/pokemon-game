@@ -1,13 +1,17 @@
-require 'spec_helper'
-require 'capybara'
-require 'capybara/rspec'
-
 feature 'User input' do
   scenario 'User can see input after submitting' do
-    visit('/')
-      fill_in 'Player_1_name', with: 'Raefe'
-      fill_in 'Player_2_name', with: 'Tom'
-      click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content 'Raefe vs Tom'
+  end
+end
+
+
+feature 'Reducing HP' do
+  scenario 'Player 2 HP to reduce by  10' do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'Okay.'
+    expect(page).to have_content 'Tom: 90HP'
+    expect(page).not_to have_content 'Tom:100 HP'
   end
 end
