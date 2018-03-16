@@ -54,6 +54,6 @@ class Player
   end
 
   def healing
-    @hitpoints = DEFAULT_HITPOINTS
+    @hit_points = DEFAULT_HITPOINTS
   end
 end

@@ -37,8 +37,8 @@ class Battle < Sinatra::Base
 
   post '/heal' do
     @game = Game.return_instance
-    @game.player_1.heal
-    puts @game.player_1.hitpoints
+    @game.turn.healing
+    @game.change_turns
     redirect('/play')
   end
 
