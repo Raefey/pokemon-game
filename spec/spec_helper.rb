@@ -2,7 +2,6 @@ require 'simplecov'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require_relative './features/web_helpers.rb'
 require_relative '../lib/my_app.rb'
 
 SimpleCov.start

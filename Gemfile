@@ -10,5 +10,6 @@ gem 'rspec'
 gem 'simplecov'
 gem 'sinatra'
 gem 'shotgun'
+gem 'simplecov', require: false, group: :test
 
 # gem "rails"

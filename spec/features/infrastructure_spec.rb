@@ -1,17 +1,31 @@
 feature 'User input' do
-  scenario 'User can see input after submitting' do
-    sign_in_and_play
-    expect(page).to have_content 'Raefe vs Tom'
+  scenario 'User can see input after submitting and it puts Charmander against Squirtle' do
+    visit('/')
+    click_button('Charmander')
+    expect(page).to have_content 'Charmander vs Squirtle'
   end
+
+  scenario 'User can see input after submitting and it puts Bulbasaur against Charmander' do
+    visit('/')
+    click_button('Bulbasaur')
+    expect(page).to have_content 'Bulbasaur vs Charmander'
+  end
+
+  scenario 'User can see input after submitting and it puts Squirtle against Bulbasaur' do
+    visit('/')
+    click_button('Squirtle')
+    expect(page).to have_content 'Squirtle vs Bulbasaur'
+  end
+
 end
 
 
 feature 'Reducing HP' do
   scenario 'Player 2 HP to reduce by  10' do
-    sign_in_and_play
-    click_button 'Attack'
+    visit('/')
+    click_button('Charmander')
+    click_button 'Ember'
     click_button 'Okay.'
-    expect(page).to have_content 'Tom: 90HP'
-    expect(page).not_to have_content 'Tom:100 HP'
+    expect(page).not_to have_content 'Squirtle: 100 HP'
   end
 end

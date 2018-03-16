@@ -1,31 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Raefe/Documents/Coding work/Projects/Makers_academy/Week3/battle-monsters/spec/features/hitpoints_spec.rb": [
-        1,
-        1,
-        1
-      ],
-      "/Users/Raefe/Documents/Coding work/Projects/Makers_academy/Week3/battle-monsters/spec/features/infrastructure_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Raefe/Documents/Coding work/Projects/Makers_academy/Week3/battle-monsters/spec/features/switch_turns_spec.rb": [
+      "/Users/georgedrayson/Projects/pokemon-game/spec/features/infrastructure_spec.rb": [
         1,
         1,
         1,
@@ -37,15 +13,51 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/Raefe/Documents/Coding work/Projects/Makers_academy/Week3/battle-monsters/spec/game_spec.rb": [
+      "/Users/georgedrayson/Projects/pokemon-game/spec/features/switch_turns_spec.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/georgedrayson/Projects/pokemon-game/spec/game_spec.rb": [
+        1,
+        1,
+        null,
         null,
         6,
         6,
@@ -84,7 +96,7 @@
         null,
         null
       ],
-      "/Users/Raefe/Documents/Coding work/Projects/Makers_academy/Week3/battle-monsters/spec/player_spec.rb": [
+      "/Users/georgedrayson/Projects/pokemon-game/spec/player_spec.rb": [
         1,
         null,
         1,
@@ -112,6 +124,6 @@
         null
       ]
     },
-    "timestamp": 1520599323
+    "timestamp": 1521212811
   }
 }
