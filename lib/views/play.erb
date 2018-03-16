@@ -117,13 +117,13 @@
 </div></div></div>
 <br>
 
-<div id='parent'>
+<!-- <div id='parent'>
 <div id= "attack-button">
 <form action="/attack">
   <input type="submit" value="<%=@game.player_1.poke_move%>">
 </form>
 </div></div></div>
-<br>
+<br> -->
 
 <div id='parent'>
 <div id= "heal-button">
@@ -131,8 +131,8 @@
 </div></div></div>
 <br>
 <div id='parent'>
-<div id= "heal-button">
-<button class="w3-button w3-green" onclick="heal()">Heal</button>
+<div id= "attack-button">
+<button class="w3-button w3-green" onclick="attack()">Attack</button>
 </div></div></div>
 <br>
 
@@ -159,6 +159,31 @@ function frame() {
   }
 }
 }
+
+function attack() {
+var elem = document.getElementById("player_2_health");
+var width = parseInt(elem.style.width);
+var id = setInterval(frame, 25);
+function frame() {
+  if (width <= <%=@game.player_2.hit_points - 10%>) {
+    clearInterval(id);
+    fetch("/attack",
+      {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST"
+    });
+  } else {
+    width--;
+    elem.style.width = width + '%';
+    elem.innerHTML = width + 'HP';
+  }
+}
+}
+
+
 </script>
 
 

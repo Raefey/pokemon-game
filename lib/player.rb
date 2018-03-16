@@ -10,7 +10,7 @@ class Player
   end
 
   def receive_damage
-    @hit_points -= rand(7..23)
+    @hit_points -= 10
   end
 
   def dead?
