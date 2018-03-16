@@ -11,7 +11,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    Game.create_instance(Player.new(params[:pokemon]), Player.new('Blastoise'))
+    Game.create_instance(Player.new(params[:pokemon]))
     redirect('/play')
   end
 

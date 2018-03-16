@@ -17,12 +17,29 @@ class Player
     hit_points <=0
   end
 
-  def image
+  def opponent
+    opposite = {
+      'Bulbasaur' => 'Charmander',
+      'Squirtle' => 'Bulbasaur',
+      'Charmander' => 'Squirtle'
+    }
+    Player.new(opposite[@name])
+  end
+
+  def image_back
     images = {
-      'Blastoise' => 'https://cdn.bulbagarden.net/upload/3/3d/Spr_5b_009.png',
       'Bulbasaur' => 'https://cdn.bulbagarden.net/upload/e/e9/Spr_b_5b_001.png',
       'Squirtle' => 'https://cdn.bulbagarden.net/upload/3/3d/Spr_b_5b_007.png',
       'Charmander' => 'https://cdn.bulbagarden.net/upload/5/54/Spr_b_5b_004.png'
+    }
+    images[@name]
+  end
+
+  def image_front
+    images = {
+      'Bulbasaur' => 'https://cdn.bulbagarden.net/upload/7/76/Spr_5b_001.png',
+      'Squirtle' => 'https://cdn.bulbagarden.net/upload/5/59/Spr_5b_007.png',
+      'Charmander' => 'https://cdn.bulbagarden.net/upload/0/0a/Spr_5b_004.png'
     }
     images[@name]
   end

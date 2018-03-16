@@ -2,16 +2,16 @@ class Game
 
   attr_reader :turn, :player_1, :player_2, :opponent
 
-  def initialize(player_1, player_2)
+  def initialize(player_1)
     @player_1 = player_1
-    @player_2 = player_2
+    @player_2 = player_1.opponent
     @players = [player_1, player_2]
     @turn = player_1
     @opponent = player_2
   end
 
-  def self.create_instance(player_1, player_2)
-    @game = Game.new(player_1, player_2)
+  def self.create_instance(player_1)
+    @game = Game.new(player_1)
   end
 
   def self.return_instance
