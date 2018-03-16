@@ -93,15 +93,15 @@
 
 <div id='parent'>
 <div id="player2-health-bar">
-<div class="w3-container"><div class="w3-light-grey">
-  <div id="player_2_health" class="w3-container w3-round w3-red w3-center" style="height:48px;width:<%=@game.player_2.hit_points%>%"><%=@game.player_2.name%>: <%=@game.player_2.hit_points%>HP
+<div class="w3-container w3-round-xlarge"><div class="w3-light-grey w3-round-xlarge">
+  <div id="player_2_health" class="w3-container w3-round-xlarge w3-red w3-center" style="height:30px;width:<%=@game.player_2.hit_points%>%"><%=@game.player_2.hit_points%>HP
   </div></div></div></div>
 <br>
 
 <div id='parent'>
 <div id= "player1-health-bar">
-<div class="w3-container"><div class="w3-light-grey">
-  <div id="player_1_health" class="w3-container w3-round w3-green w3-center" style="height:48px;width:<%=@game.player_1.hit_points%>%"><%=@game.player_1.name%>: <%=@game.player_1.hit_points%>HP
+<div class="w3-container w3-round-xlarge"><div class="w3-light-grey w3-round-xlarge">
+  <div id="player_1_health" class="w3-container w3-round-xlarge w3-green w3-center" style="height:30px;width:<%=@game.player_1.hit_points%>%"><%=@game.player_1.hit_points%>HP
   </div></div></div>
 <br>
 
@@ -130,6 +130,11 @@
 <button class="w3-button w3-green" onclick="heal()">Heal</button>
 </div></div></div>
 <br>
+<div id='parent'>
+<div id= "heal-button">
+<button class="w3-button w3-green" onclick="heal()">Heal</button>
+</div></div></div>
+<br>
 
 <script>
 function heal() {
@@ -150,7 +155,7 @@ function frame() {
   } else {
     width++;
     elem.style.width = width + '%';
-    elem.innerHTML = '<%=@game.player_1.name%>' + ': ' + width + 'HP';
+    elem.innerHTML = width + 'HP';
   }
 }
 }
