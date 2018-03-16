@@ -1,31 +1,61 @@
+<style>
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('pokemon_gb-webfont.woff2') format('woff2'),
+         url('pokemon_gb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#parent{
+    padding: 0px, auto;
+    width: 50%;
+    margin: auto;
+}
+#chooser{
+  font-family: 'pokemon_gbregular';
+    position: absolute;
+    top: 200px;
+    left: 475px;
+    width: 500px;
+    height: 300px;
+    border: solid 0px;
+}
+
+body {
+  font-family: arial;
+}
+
+</style>
+
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="http://example.com/favicon.png">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <!-- <h1> Choose your pokemon trainer name </h1> -->
 
+    <!-- <h1> Choose your pokemon trainer name </h1> -->
+    <div id="parent">
+    <div id="chooser">
     <form action="/names" method="post">
      <!-- <input type="text" name="Player_1_name" value="Raefe">
      <input type="text" name="Player_2_name" value="George"> -->
 
      <h1> Choose your starting pokemon </h1>
      <label>
-       <input type="radio" name="pokemon" value="Bulbasaur" required>
-       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/7/76/Spr_5b_001.png">
+       <input type="image" style="height: 150px; width: 150px;" src="https://cdn.bulbagarden.net/upload/7/76/Spr_5b_001.png" name="pokemon" value="Bulbasaur" required>
      </label>
      <label>
-       <input type="radio" name="pokemon" value="Squirtle" required>
-       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/5/59/Spr_5b_007.png">
+       <input type="image" style="height: 150px; width: 150px;" src="https://cdn.bulbagarden.net/upload/5/59/Spr_5b_007.png" name="pokemon" value="Squirtle" required>
      </label>
      <label>
-       <input type="radio" name="pokemon" value="Charmander" required>
-       <img style="height: 100px; width: 100px;" src="https://cdn.bulbagarden.net/upload/0/0a/Spr_5b_004.png">
+       <input type="image" style="height: 150px; width: 150px;" src="https://cdn.bulbagarden.net/upload/0/0a/Spr_5b_004.png" name="pokemon" value="Charmander" required>
      </label>
-     <br><input type="submit" value="Submit">
     </form>
+  </div></div>
 
 
   </body>

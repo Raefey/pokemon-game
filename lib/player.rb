@@ -10,7 +10,7 @@ class Player
   end
 
   def receive_damage
-    @hit_points -= 10
+    @hit_points -= rand(7..23)
   end
 
   def dead?
@@ -42,6 +42,15 @@ class Player
       'Charmander' => 'https://cdn.bulbagarden.net/upload/0/0a/Spr_5b_004.png'
     }
     images[@name]
+  end
+
+  def poke_move
+    move = {
+      'Bulbasaur' => 'Vine Whip',
+      'Squirtle' => 'Bubble',
+      'Charmander' => 'Ember'
+    }
+    move[@name]
   end
 
   def healing
