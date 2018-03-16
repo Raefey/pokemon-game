@@ -164,17 +164,18 @@ function attack() {
 var elem = document.getElementById("player_2_health");
 var width = parseInt(elem.style.width);
 var id = setInterval(frame, 25);
+fetch("/attack",
+  {
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+  method: "POST"
+});
 function frame() {
   if (width <= <%=@game.player_2.hit_points - 10%>) {
     clearInterval(id);
-    fetch("/attack",
-      {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST"
-    });
+    window.location.replace('/play');
   } else {
     width--;
     elem.style.width = width + '%';
